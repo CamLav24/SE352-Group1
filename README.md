@@ -3,6 +3,7 @@ This project aims to create a robust object-oriented system for managing hotel d
 
 ## Project Members
 | Members | Area | Role |
+|---------|-----|------|
 | Cameron Laviste | Classes | Developing Hotel Class|
 | Jon Doretti | TBD | TBD|
 | Vinod Kotapati | TBD | TBD|

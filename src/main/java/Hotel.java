@@ -5,10 +5,10 @@ public class Hotel {
     // for tests ONLY
     @Setter
     @Getter
-    private long id;
+    private long Hotel_Id;
     @Getter
     @Setter
-    private String name;
+    private String Hotel_Name;
 
     @Setter
     @Getter
@@ -16,40 +16,29 @@ public class Hotel {
 
     @Setter
     @Getter
-    String city;
+    private long Location_Id;
 
     @Setter
     @Getter
-    private int rating;
+    private int Rooms_left;
 
-    public Hotel(String name, String description, int rating) {
-        this.name = name;
+    public Hotel(long id, String name, String description, long location, int room) {
+        this.Hotel_Id = id;
+        this.Hotel_Name = name;
         this.description = description;
-        this.rating = rating;
+        this.Location_Id = location;
+        this.Rooms_left = room;
     }
 
-
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public String getCity() {
-        return city;
-    }
 
     @Override
     public String toString() {
         return "Hotel {" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "Hotel Id=" + Hotel_Id +
+                ",Hotel name='" + Hotel_Name + '\'' +
                 ", description='" + description + '\'' +
-                ", city='" + city + '\'' +
-                ", rating=" + rating +
+                ", Location Id='" + Location_Id + '\'' +
+                ", Rooms Left=" + Rooms_left +
                 '}';
     }
 }

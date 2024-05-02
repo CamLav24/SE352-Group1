@@ -1,9 +1,16 @@
+import lombok.Getter;
+import lombok.Setter;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Date;
+
 class Reservation {
     private Guest guest;
     private Room room;
     private Date checkInDate;
     private Date checkOutDate;
     private double totalBill;
+
 
     public Reservation(Guest guest, Room room, Date checkInDate, Date checkOutDate, double totalBill) {
         this.guest = guest;

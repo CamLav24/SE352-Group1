@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: "jdbc:h2:mem:demo-db"
+    driverClassName: "org.h2.Driver"
+    username: test
+    password: test
+  h2:
+    console.enabled: true
+
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: create-drop
+    defer-datasource-initialization: true

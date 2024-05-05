@@ -13,6 +13,10 @@ Guest Class: Represents guests staying at the hotel, with attributes like name, 
 
 Reservation Class: Manages reservations made by guests, including check-in/out dates, room allocation, guest information, and billing details.
 
+Payment Class: Manages payment transactions made by guests, including payment dates, amounts, methods, and associated booking details.
+
+Booking Class: Handles guest bookings, storing information such as check-in and check-out dates, room details, and payment amounts.
+
 # Setup Instructions
 Clone the Repository: Start by cloning the repository to your local machine:
 ...
@@ -26,13 +30,13 @@ To use the hotel data project:
 ## Project Members
 
 
-| Member           | Feature | Note |
-|------------------|---------|------|
-| Cameron Laviste  | -       | -    |
-| Jerry Tang       | -       | -    |
-| Jon Doretti      | -       | -    |
-| Vinod Kotapati   | -       | -    |
-| Shihua Zhang     | -       | -    |
+| Member           | Feature          | Note |
+|------------------|------------------|-----|
+| Cameron Laviste  | -                | -   |
+| Jerry Tang       | -                | -   |
+| Jon Doretti      | -                | -   |
+| Vinod Kotapati   | Payment, Booking | The Booking table manages guest bookings, while the Payment table records payment transactions made by guests.    |
+| Shihua Zhang     | -                | -   |
 
 
 <br/>
@@ -51,9 +55,10 @@ First we vote, and then roll dice.
 
 ## Meeting Notes
 
-| #   | Date      | Note                                                                                                                                              | Participants |
-|-----|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 1   | 4.4.2023  | We decided our project scope and setup env.                                                                                                       |              |
+| #   | Date      | Note                                                                             | Participants |
+|-----|-----------|----------------------------------------------------------------------------------|--------------|
+| 1   | 4-4-2024  | We decided our project scope and setup env.                                      | All          |
+ | 2   | 4-25-2024 | Created Basic project and Divided the inital features.                           | All          |
 
 
 
@@ -61,10 +66,13 @@ First we vote, and then roll dice.
 
 ## Decision Made
 
-| # | Area                  | Decision     | Alternative | Rationale                                                             |
-|---|-----------------------|--------------|-------------|-----------------------------------------------------------------------|
-| 1 | IDE                   | IntelliJ IDEA | VS Code     | Language independent editor so that it can be used in non java course |
-| 2 | Dependency Management | Maven        | Gradle      | familiarity                                                           |
+| #   | Area                  | Decision     | Alternative | Rationale                                                             |
+|-----|-----------------------|--------------|-------------|-----------------------------------------------------------------------|
+| 1   | IDE                   | IntelliJ IDEA | VS Code     | Language independent editor so that it can be used in non java course |
+| 2   | Dependency Management | Maven        | Gradle      | familiarity                                                           |
+| 3   | Configurations        | Application properties           | YML         | Liked this approach                                                   |
+| 4   | Database              | H2            | -           | Will update according to requirement.                                 |
+
 
 ## Appendix
 
@@ -73,3 +81,10 @@ Working code (Milestone 1):
 ![img.png](src/main/resources/img/img.png)
 
 ![img1.png](src/main/resources/img/img1.png)
+
+
+Working code (Milestone 2):
+
+![img2.png](src/main/resources/img/img2.png)
+
+![img3.png](src/main/resources/img/img3.png)

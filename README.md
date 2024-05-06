@@ -6,7 +6,7 @@ This project aims to create a robust object-oriented system for managing hotel d
 |---------|-----|------|
 | Cameron Laviste | Classes | Developing Hotel Class|
 | Jon Doretti | SQL | Database establishment|
-| Vinod Kotapati | Persistance | TBD|
+| Vinod Kotapati | Persistance | reservation booking and payment|
 | Zhanyuan Tang | Persistance| dao/dto for hotel database |
 | Shihua Zhang | Data finding | Hotel Service for list| 
 

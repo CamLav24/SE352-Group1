@@ -5,10 +5,10 @@ This project aims to create a robust object-oriented system for managing hotel d
 | Members | Area | Role |
 |---------|-----|------|
 | Cameron Laviste | Classes | Developing Hotel Class|
-| Jon Doretti | TBD | TBD|
-| Vinod Kotapati | TBD | TBD|
-| Zhanyuan Tang | TBD| TBD |
-| Shihua Zhang | TBD | TBD| 
+| Jon Doretti | Percisstance | TBD|
+| Vinod Kotapati | Persistance | TBD|
+| Zhanyuan Tang | Persistance| dao/dto |
+| Shihua Zhang | Data finding | TBD| 
 
 ## Features
 Hotel Class: Represents a hotel with attributes such as name, address, contact information, and a collection of rooms.

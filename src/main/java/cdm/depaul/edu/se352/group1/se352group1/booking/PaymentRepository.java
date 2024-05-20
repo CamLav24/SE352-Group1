@@ -15,4 +15,5 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
 
     Payment findByTransactionId(String transactionId);
 
+    boolean existsByBookingId(Long bookingId);
 }

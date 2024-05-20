@@ -5,14 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import org.hibernate.annotations.UuidGenerator;
 
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 
 @Data
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "payment", uniqueConstraints = {
         @UniqueConstraint(columnNames = { "trans_id"})
@@ -48,13 +49,30 @@ public class Payment {
     @Column(name = "method", nullable = false)
     private String typeOfMethod;
 
-    @NonNull
+
     @Column(name = "trans_id", nullable = false, unique = true)
     private String transactionId;
 
 
     private String remarks;
 
+    public Payment(Long guestId,Booking booking, LocalDate date,Float amount, String typeOfMethod, String remarks){
+
+        this.date = date;
+        this.remarks= remarks;
+        this.guestId = guestId;
+        this.booking = booking;
+        this.amount = amount;
+        this.typeOfMethod = typeOfMethod;
+        this.transactionId = UUID.randomUUID().toString();
+    }
+
+//    @PrePersist
+//    public void generateTransactionId() {
+//        if (this.transactionId == null) {
+//            this.transactionId = UUID.randomUUID().toString();
+//        }
+//    }
 
 }
 

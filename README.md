@@ -1,16 +1,17 @@
+## SE 452
+
 ## Overview
+
 This project aims to create a robust object-oriented system for managing hotel data. It provides a structured framework for organizing information related to hotels, rooms, guests, reservations, and more. By utilizing object-oriented principles, the codebase ensures flexibility, scalability, and maintainability.
 
-## Project Members
-| Members | Area | Role |
-|---------|-----|------|
-| Cameron Laviste | Classes | Developing Hotel Class|
-| Jon Doretti | SQL | Database establishment|
-| Vinod Kotapati | Persistance | reservation booking and payment|
-| Zhanyuan Tang | Persistance| dao/dto for hotel database |
-| Shihua Zhang | Data finding | Hotel Service for list| 
+# Milestones
 
-## Features
+*Milestone 1: Establish project parameters, outline structural framework, and allocate specific responsibilities to team members.<br/>
+*Milestone 2: Establish project data storage and initial service implementation for each module.<br/>
+*Milestone 3: Enhance tables as per evolving needs, integrate Swagger documentation, Git-hub workflow for pushing image into docker hub and develop customized services.<br/>
+
+
+# Features
 Hotel Class: Represents a hotel with attributes such as name, address, contact information, and a collection of rooms.
 
 Room Class: Defines individual rooms within a hotel, including room number, type (single, double, suite, etc.), availability status, and pricing information.
@@ -23,13 +24,41 @@ Payment Class: Manages payment transactions made by guests, including payment da
 
 Booking Class: Handles guest bookings, storing information such as check-in and check-out dates, room details, and payment amounts.
 
-## Communication Mechanism
-We will be using discord to communicate
-
-## Decisions Made
-To be Added
-## Setup Instructions
+# Setup Instructions
 Clone the Repository: Start by cloning the repository to your local machine:
+...
+# Usage
+To use the hotel data project:
+...
+
+<br>
+* Milestone 1: Establish the project, outline its structure, and assign specific areas of responsibility to each team member<br />
+
+## Project Members
+
+
+| Member           | Feature          | Note |
+|------------------|------------------|-----|
+| Cameron Laviste  | -                | -   |
+| Jerry Tang       | -                | -   |
+| Jon Doretti      | -                | -   |
+| Vinod Kotapati   | Payment, Booking | The Booking table manages guest bookings, while the Payment table records payment transactions made by guests.    |
+| Shihua Zhang     | -                | -   |
+
+
+<br/>
+
+## Communication Mechanism
+
+Will meet using Discord and Zoom.
+
+<br/>
+
+## Conflict Resolution
+
+First we vote, and then roll dice.
+
+
 
 ## Meeting Notes
 
@@ -37,6 +66,7 @@ Clone the Repository: Start by cloning the repository to your local machine:
 |-----|-----------|----------------------------------------------------------------------------------|--------------|
 | 1   | 4-4-2024  | We decided our project scope and setup env.                                      | All          |
  | 2   | 4-25-2024 | Created Basic project and Divided the inital features.                           | All          |
+
 
 
 
@@ -50,12 +80,6 @@ Clone the Repository: Start by cloning the repository to your local machine:
 | 2   | Dependency Management | Maven        | Gradle      | familiarity                                                           |
 | 3   | Configurations        | Application properties           | YML         | Liked this approach                                                   |
 | 4   | Database              | H2            | -           | Will update according to requirement.                                 |
-
-
-...
-## Usage
-To use the hotel data project:
-...
 
 
 ## Appendix
@@ -72,3 +96,10 @@ Working code (Milestone 2):
 ![img2.png](src/main/resources/img/img2.png)
 
 ![img3.png](src/main/resources/img/img3.png)
+
+Working code (Milestone 3):
+
+![img5.png](src/main/resources/img/img5.png)
+
+![img4.png](src/main/resources/img/img4.png)
+

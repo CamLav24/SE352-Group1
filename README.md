@@ -103,3 +103,10 @@ Working code (Milestone 3):
 
 ![img4.png](src/main/resources/img/img4.png)
 
+Before sorting:
+
+![beforeSort.png](src/main/resources/img/beforeSort.png)
+
+After sorting (in prize ascending order):
+
+![afterSort.png](src/main/resources/img/afterSort.png)

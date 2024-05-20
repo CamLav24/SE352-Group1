@@ -45,7 +45,7 @@
  *
  *
  *
- * @Author : Vinod Chowdary.
+ * @Author : Vinod Chowdary
  */
 
 package cdm.depaul.edu.se352.group1.se352group1.booking;

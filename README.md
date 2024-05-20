@@ -39,11 +39,11 @@ To use the hotel data project:
 
 | Member           | Feature          | Note |
 |------------------|------------------|-----|
-| Cameron Laviste  | -                | -   |
-| Jerry Tang       | -                | -   |
+| Cameron Laviste  | JUnit            | hotel service junit testing   |
+| Jerry Tang       | Front End        | Setting up website HTML   |
 | Jon Doretti      | -                | -   |
-| Vinod Kotapati   | Payment, Booking | The Booking table manages guest bookings, while the Payment table records payment transactions made by guests.    |
-| Shihua Zhang     | -                | -   |
+| Vinod Kotapati   | Database         | Setting up possible docker opportinity |
+| Shihua Zhang     | Front End        | setting up front end sorting functions / feature   |
 
 
 <br/>
@@ -79,7 +79,7 @@ First we vote, and then roll dice.
 | 1   | IDE                   | IntelliJ IDEA | VS Code     | Language independent editor so that it can be used in non java course |
 | 2   | Dependency Management | Maven        | Gradle      | familiarity                                                           |
 | 3   | Configurations        | Application properties           | YML         | Liked this approach                                                   |
-| 4   | Database              | H2            | -           | Will update according to requirement.                                 |
+| 4   | Database              | H2            | Docker           | Will update according to requirement.                                 |
 
 
 ## Appendix

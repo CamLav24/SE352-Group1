@@ -16,5 +16,7 @@ public interface HotelsMapper {
 
     List<Hotels> selectAll();
 
+    List<Hotels> selectAllSortedByPrice();
+
     int updateByPrimaryKey(Hotels record);
 }

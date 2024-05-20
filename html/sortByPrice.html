@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hotel {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .hotel h2 {
+            margin: 0;
+        }
+
+        .hotel img {
+            max-width: 600px;
+            max-height: 400px;
+            display: block;
+        }
+        #sortPriceBtn {
+            width: 300px;
+            height: 100px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 16px 0;
+        }
+        #sortPriceBtn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+<h1>Hotel List</h1>
+<button id="sortPriceBtn">Sort by Price</button>
+<div id="hotel-list"></div>
+
+<script>
+    async function fetchHotelList(sorted = false) {
+        try {
+            const endpoint = sorted ? 'http://localhost:8080/hotel/getSortedList' : 'http://localhost:8080/hotel/getList';
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Fetched data:', data);
+            displayHotels(data.obj.records);
+        } catch (error) {
+            console.error('Error fetching hotel list:', error);
+            document.getElementById('hotel-list').innerText = 'Error fetching hotel list. Please check the console for details.';
+        }
+    }
+
+    function displayHotels(hotels) {
+        const hotelList = document.getElementById('hotel-list');
+        hotelList.innerHTML = '';
+
+        hotels.forEach(hotel => {
+            const hotelDiv = document.createElement('div');
+            hotelDiv.className = 'hotel';
+            hotelDiv.innerHTML = `
+                    <h2>${hotel.hotelName}</h2>
+                    <p><img src="${hotel.imageUrl}" alt="${hotel.hotelName}"></p>
+                    <p>Description: ${hotel.description || 'N/A'}</p>
+                    <p>Price: $${hotel.price || 'N/A'}</p>
+                    <p>Rooms Left: ${hotel.roomLeft || 'N/A'}</p>
+                `;
+            hotelList.appendChild(hotelDiv);
+        });
+    }
+
+    document.getElementById('sortPriceBtn').addEventListener('click', () => {
+        fetchHotelList(true);
+    });
+
+    window.onload = () => fetchHotelList();
+</script>
+</body>
+</html>

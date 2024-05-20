@@ -14,6 +14,7 @@ public class Hotels {
     private Integer roomsLeft;
 
     private String description;
+    private String imageUrl;
 
     public Integer getHotelId() {
         return hotelId;
@@ -61,5 +62,12 @@ public class Hotels {
 
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
+    }
+
+    public void setImageUrl(String url){
+        this.imageUrl= url == null ? null : url.trim();
+    }
+    public String getImageUrl() {
+        return imageUrl;
     }
 }

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ht452.hotelpage452.mapper.HotelsMapper">
-  <resultMap id="BaseResultMap" type="com.ht452.hotelpage452.dao.Hotels">
+<mapper namespace="cdm.depaul.edu.se352.group1.se352group1.mapper.HotelsMapper">
+  <resultMap id="BaseResultMap" type="cdm.depaul.edu.se352.group1.se352group1.dao.Hotels">
     <id column="hotel_id" jdbcType="INTEGER" property="hotelId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="location_id" jdbcType="INTEGER" property="locationId" />
     <result column="price" jdbcType="DECIMAL" property="price" />
     <result column="rooms_left" jdbcType="INTEGER" property="roomsLeft" />
     <result column="description" jdbcType="LONGVARCHAR" property="description" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from Hotels
     where hotel_id = #{hotelId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.ht452.hotelpage452.dao.Hotels">
+  <insert id="insert" parameterType="cdm.depaul.edu.se352.group1.se352group1.dao.Hotels">
     insert into Hotels (hotel_id, name, location_id, 
       price, rooms_left, description
       )
@@ -21,7 +22,7 @@
       #{price,jdbcType=DECIMAL}, #{roomsLeft,jdbcType=INTEGER}, #{description,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.ht452.hotelpage452.dao.Hotels">
+  <update id="updateByPrimaryKey" parameterType="cdm.depaul.edu.se352.group1.se352group1.dao.Hotels">
     update Hotels
     set name = #{name,jdbcType=VARCHAR},
       location_id = #{locationId,jdbcType=INTEGER},
@@ -36,7 +37,12 @@
     where hotel_id = #{hotelId,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select hotel_id, name, location_id, price, rooms_left, description
-    from Hotels
+    select H.hotel_id, name, location_id, price, rooms_left, description,image_url
+    from Hotels H left join Images I on H.hotel_id = I.hotel_id where I.type = 'thumbnail'
+  </select>
+  <select id="selectAllSortedByPrice" resultMap="BaseResultMap">
+    select H.hotel_id, name, location_id, price, rooms_left, description, image_url
+    from Hotels H left join Images I on H.hotel_id = I.hotel_id where I.type = 'thumbnail'
+    order by H.price
   </select>
 </mapper>

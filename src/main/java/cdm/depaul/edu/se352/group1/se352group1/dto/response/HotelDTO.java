@@ -24,4 +24,5 @@ public class HotelDTO {
     private String description;
     private Integer price;
     private Integer roomLeft;
+    private String imageUrl;
 }

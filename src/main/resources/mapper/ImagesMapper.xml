@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cdm.depaul.edu.se352.group1.se352group1.mapper.ImagesMapper">
+  <resultMap id="BaseResultMap" type="cdm.depaul.edu.se352.group1.se352group1.dao.Images">
+    <id column="image_id" jdbcType="INTEGER" property="imageId" />
+    <result column="hotel_id" jdbcType="INTEGER" property="hotelId" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from Images
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cdm.depaul.edu.se352.group1.se352group1.dao.Images">
+    insert into Images (image_id, hotel_id, image_url, 
+      type)
+    values (#{imageId,jdbcType=INTEGER}, #{hotelId,jdbcType=INTEGER}, #{imageUrl,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="cdm.depaul.edu.se352.group1.se352group1.dao.Images">
+    update Images
+    set hotel_id = #{hotelId,jdbcType=INTEGER},
+      image_url = #{imageUrl,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR}
+    where image_id = #{imageId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select image_id, hotel_id, image_url, type
+    from Images
+    where image_id = #{imageId,jdbcType=INTEGER} and type = "thumbnail"
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select image_id, hotel_id, image_url, type
+    from Images
+    order by id desc,name asc
+  </select>
+</mapper>

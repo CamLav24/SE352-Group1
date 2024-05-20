@@ -1,6 +1,6 @@
 /**
- * <b>CommonResp</b>
- * Handles http post requests for hotels, then makes a request for getHotelList, for mapping.
+ *
+ * Handles http post requests for hotels, then makes a request for getHotelList, for sorting results.
  *
  * @author Cam
  */

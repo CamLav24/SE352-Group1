@@ -8,8 +8,8 @@
 name: Java CI with Maven - Pull Request Main
 
 on:
-  pull_request:
-    branches: [ "vinod_working" ]
+  push:
+    branches: ["vinod_working" ]
 
 permissions:
   contents: read

@@ -13,6 +13,14 @@
  *
  * 6. Developed repositories by extending the JPA Repository interface to leverage its built-in methods for interacting with the database effectively.
  *
+ * 7.  Utilized GetMapping and PostMapping to establish Rest Controller functionality, facilitating API calls.
+ *
+ * 8. Conducted unit testing for the generated tables to ensure robustness.
+ *
+ * 9. Developed dedicated services for each entity to streamline operations.
+ *
+ * 10. Integrated Swagger documentation across all services, enhancing accessibility and clarity of the API.
+ *
  * This package contains entity classes representing data related to bookings and payments in the system.
  *
  *
@@ -34,6 +42,7 @@
  *
  * 1) Records save
  * 2) Get Record by using guestId, CheckIOnDate etc.,
+ * 3) Covered unit tests for created services.
  *
  * Documentation on features that were not covered in class (persistence and non-persistence):
  *
@@ -41,6 +50,7 @@
  * 2) Implemented relation between the Booking and Payment tables using the foreign key concept (@JoinColumn, @OneToOne annotation).
  *    - The booking_id in the Payment table serves as a foreign key, establishing a one-to-one relationship with the Booking table.
  * 3) Ensured that every test case handles dependencies in other tables, maintaining data integrity.
+ * 4) Created relevant services for both booking and payments.
  *
  *
  *

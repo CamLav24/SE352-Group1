@@ -25,7 +25,7 @@ public class BookingTest {
 
     @Test
     public void testFindByGuestId() {
-        Long guestId = 1L;
+        Long guestId = 22L;
         List<Booking> bookings = bookingRepository.findByGuestId(guestId);
         assertEquals(1, bookings.size()); // Assuming there are two bookings for guestId 1
     }

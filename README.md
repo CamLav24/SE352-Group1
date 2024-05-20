@@ -4,6 +4,13 @@
 
 This project aims to create a robust object-oriented system for managing hotel data. It provides a structured framework for organizing information related to hotels, rooms, guests, reservations, and more. By utilizing object-oriented principles, the codebase ensures flexibility, scalability, and maintainability.
 
+# Milestones
+
+*Milestone 1: Establish project parameters, outline structural framework, and allocate specific responsibilities to team members.<br/>
+*Milestone 2: Establish project data storage and initial service implementation for each module.<br/>
+*Milestone 3: Enhance tables as per evolving needs, integrate Swagger documentation, Git-hub workflow for pushing image into docker hub and develop customized services.<br/>
+
+
 # Features
 Hotel Class: Represents a hotel with attributes such as name, address, contact information, and a collection of rooms.
 
@@ -62,6 +69,7 @@ First we vote, and then roll dice.
 
 
 
+
 <br/>
 
 ## Decision Made
@@ -88,3 +96,10 @@ Working code (Milestone 2):
 ![img2.png](src/main/resources/img/img2.png)
 
 ![img3.png](src/main/resources/img/img3.png)
+
+Working code (Milestone 3):
+
+![img5.png](src/main/resources/img/img5.png)
+
+![img4.png](src/main/resources/img/img4.png)
+

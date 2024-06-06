@@ -7,7 +7,7 @@ version: '1.0'
 services:
     app:
         container_name: demo-app
-        image: wyjared/se452-group10:latest
+        image: vinodk1999/se452:latest
         env_file: ./.env
         ports:
             - "$SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT"

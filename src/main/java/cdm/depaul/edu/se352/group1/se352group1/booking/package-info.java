@@ -23,6 +23,11 @@
  *
  * 11. Implemented Git-hub workflow to push application image to docker hub.
  *
+ * 12. Implemented Front-end using themeleaf and used Model and view controller library.
+ *
+ * 14. Developed docker file to  pull image from hub.docker.
+ *
+ *
  * This package contains entity classes representing data related to bookings and payments in the system.
  *
  *
@@ -52,7 +57,11 @@
  * 2) Implemented relation between the Booking and Payment tables using the foreign key concept (@JoinColumn, @OneToOne annotation).
  *    - The booking_id in the Payment table serves as a foreign key, establishing a one-to-one relationship with the Booking table.
  * 3) Ensured that every test case handles dependencies in other tables, maintaining data integrity.
- * 4) Created relevant services for both booking and payments
+ * 4) Created relevant services for both booking and payments.
+ * 5) Implemented Front end using themeleaf.
+ * 6) updated services to process data and able to view in the UI.
+ * 7) Used Bootstrap for pages.
+ * *) Dynamic updates on UI.
  *
  *
  *

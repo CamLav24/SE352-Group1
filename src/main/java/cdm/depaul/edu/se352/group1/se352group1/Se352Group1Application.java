@@ -21,12 +21,12 @@ public class Se352Group1Application {
     }
 
 
-    @GetMapping("/")
-    public String index() {
-
-        return "Welcome to the Spring Boot application";
-
-    }
+//    @GetMapping("/")
+//    public String index() {
+//
+//        return "Welcome to the Spring Boot application";
+//
+//    }
 
 
 

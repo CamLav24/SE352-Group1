@@ -11,13 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.*;
 
 @RestController
-@RequestMapping("bookings")
+@RequestMapping("/api/bookings")
 @Tag(name = "Bookings",description = "Everything about Bookings")
 @Log4j2
 public class BookingService {
@@ -25,7 +26,8 @@ public class BookingService {
     @Autowired
     private BookingRepository bookingRepo;
 
-
+    @Autowired
+    private PaymentRepository paymentRepository;
 
     @GetMapping
     @Operation(summary = "Get all bookings", description = "Retrieve a list of all bookings")
@@ -107,24 +109,37 @@ public class BookingService {
         });
     }
 
-    @DeleteMapping("/{id}")
-    @Operation(summary = "Delete a booking by ID", description = "Delete a booking by its ID")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "Booking deleted"),
-            @ApiResponse(responseCode = "404", description = "Booking not found")
-    })
-    public ResponseEntity<Void> deleteBooking(@PathVariable Long id) {
-        log.info("Deleting booking with ID: {}", id);
-        if (bookingRepo.existsById(id)) {
-            bookingRepo.deleteById(id);
-            log.info("Booking with ID: {} deleted successfully", id);
-            return ResponseEntity.noContent().build();
+//    @DeleteMapping("/{id}")
+//    @Operation(summary = "Delete a booking by ID", description = "Delete a booking by its ID")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "204", description = "Booking deleted"),
+//            @ApiResponse(responseCode = "404", description = "Booking not found")
+//    })
+//    public ResponseEntity<Void> deleteBooking(@PathVariable Long id) {
+//        log.info("Deleting booking with ID: {}", id);
+//        if (bookingRepo.existsById(id)) {
+//            bookingRepo.deleteById(id);
+//            log.info("Booking with ID: {} deleted successfully", id);
+//            return ResponseEntity.noContent().build();
+//        } else {
+//            log.error("Booking with ID: {} not found", id);
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
+
+    @Transactional
+    public void deleteBooking(Long bookingId) {
+        // Check if the booking exists
+        Optional<Booking> bookingOptional = bookingRepo.findById(bookingId);
+        if (bookingOptional.isPresent()) {
+            // Delete the associated payment
+            paymentRepository.deleteByBookingId(bookingId);
+            // Delete the booking
+            bookingRepo.deleteById(bookingId);
         } else {
-            log.error("Booking with ID: {} not found", id);
-            return ResponseEntity.notFound().build();
+            throw new RuntimeException("Booking not found with id: " + bookingId);
         }
     }
-
 
     @GetMapping("/bookings/byGuestId")
     public List<Booking> findBookingsByGuestId(@RequestParam Long guestId) {

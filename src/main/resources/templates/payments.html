@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookings</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">Payment List</h1>
+        <div th:if="${#lists.isEmpty(payments)}" class="notification is-warning">
+            No Payments
+        </div>
+        <div th:unless="${#lists.isEmpty(payments)}">
+            <table class="table is-bordered is-hoverable is-fullwidth">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Guest ID</th>
+                    <th>Booking ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Type of Method</th>
+                    <th>Transaction Id</th>
+                    <th>Remarks</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="payment: ${payments}">
+                    <td th:text="${payment.id}"></td>
+                    <td th:text="${payment.guestId}"></td>
+                    <td th:text="${payment.booking.id}"></td>
+                    <td th:text="${payment.date}"></td>
+                    <td th:text="${payment.amount}"></td>
+                    <td th:text="${payment.typeOfMethod}"></td>
+                    <td th:text="${payment.transactionId}"></td>
+                    <td th:text="${payment.remarks}"></td>
+<!--                    <td>-->
+<!--                        <a th:href="'payments/edit/' + ${payment.id}" class="button is-info">-->
+<!--                                <span class="icon is-small">-->
+<!--                                    <i class="fas fa-user-edit"></i>-->
+<!--                                </span>-->
+<!--                            <span>Edit</span>-->
+<!--                        </a>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                                <span class="icon is-small">-->
+<!--                                    <i class="fas fa-user-times"></i>-->
+<!--                                </span>-->
+<!--                            <span>Delete</span>-->
+<!--                        </a>-->
+<!--                    </td>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>

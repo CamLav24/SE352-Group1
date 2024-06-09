@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("payments")
+@RequestMapping("/api/payments")
 @Tag(name = "Payments", description = "Everything about payments")
 @Log4j2
 public class PaymentService {

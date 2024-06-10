@@ -18,7 +18,7 @@ logging:
   level:
     root: INFO
     org.springframework: ERROR
-    edu.group10.se452_g10: DEBUG
+    edu.se352.group1.se352group1: DEBUG
 
 
 spring:

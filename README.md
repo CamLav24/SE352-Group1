@@ -39,7 +39,7 @@ To use the hotel data project:
 
 
 | Member           | Feature          | Note                                                                                                                                              |
-|------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------------|------------------|-----|
 | Cameron Laviste  | JUnit            | hotel service junit testing   |
 | Jerry Tang       | Front End        | Setting up website HTML   |
 | Jon Doretti      | -                | -   |
@@ -103,14 +103,6 @@ Working code (Milestone 3):
 
 ![img4.png](src/main/resources/img/img4.png)
 
-Working code (Milestone 4):
-
-![img6.png](src/main/resources/img/img6.png)
-
-![img_1.png](src/main/resources/img/img_1.png)
-
-![img_2.png](src/main/resources/img/img_2.png)
-
 Before sorting:
 
 ![beforeSort.png](src/main/resources/img/beforeSort.png)
@@ -118,3 +110,11 @@ Before sorting:
 After sorting (in prize ascending order):
 
 ![afterSort.png](src/main/resources/img/afterSort.png)
+
+Working code (Milestone 4):
+
+![img6.png](src/main/resources/img/img6.png)
+
+![img_1.png](src/main/resources/img/img_1.png)
+
+![img_2.png](src/main/resources/img/img_2.png)

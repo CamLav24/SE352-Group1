@@ -40,12 +40,11 @@ To use the hotel data project:
 
 | Member           | Feature          | Note                                                                                                                                              |
 |------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cameron Laviste  | -                | -                                                                                                                                                 |
-| Jerry Tang       | -                | -                                                                                                                                                 |
-| Jon Doretti      | -                | -                                                                                                                                                 |
+| Cameron Laviste  | JUnit            | hotel service junit testing   |
+| Jerry Tang       | Front End        | Setting up website HTML   |
+| Jon Doretti      | -                | -   |
 | Vinod Kotapati   | Payment, Booking | The Booking table manages guest bookings, while the Payment table records payment transactions made by guests)<br/> [Link to package-info.java](https://github.com/CamLav24/SE352-Group1/blob/master/src/main/java/cdm/depaul/edu/se352/group1/se352group1/booking/package-info.java) |
-| Shihua Zhang     | -                | -                                                                                                                                                 |
-
+| Shihua Zhang     | Front End        | setting up front end sorting functions / feature   |
 
 <br/>
 
@@ -111,3 +110,11 @@ Working code (Milestone 4):
 ![img_1.png](src/main/resources/img/img_1.png)
 
 ![img_2.png](src/main/resources/img/img_2.png)
+
+Before sorting:
+
+![beforeSort.png](src/main/resources/img/beforeSort.png)
+
+After sorting (in prize ascending order):
+
+![afterSort.png](src/main/resources/img/afterSort.png)

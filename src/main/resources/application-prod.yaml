@@ -15,26 +15,20 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
   level:
     root: ERROR
-    org.springframework: ERROR
-    edu.se352.group1.se352group1: DEBUG
 
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: password
-    initialization-mode: always
 
   h2:
     console.enabled: true
 
   jpa:
-    generate-ddl: true
     show-sql: true
     defer-datasource-initialization: true
     hibernate.ddl-auto: create-drop
-
-
 
 
 #  data:

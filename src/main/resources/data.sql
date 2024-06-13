@@ -16,5 +16,5 @@ VALUES (22, 1, '2024-05-15', 500.00, 'Credit Card','12121hdhdhd', 'Payment recei
 INSERT INTO payment (guest_id, booking_id, payment_date, amount, method,trans_id, remarks)
 VALUES (23, 2, '2024-06-10', 750.00, 'PayPal','12121hdhdhd22', 'Payment processed successfully');
 
---INSERT INTO payment (guest_id, booking_id, payment_date, amount, method,trans_id, remarks)
---VALUES (24, 3, '2024-07-01', 1000.00, 'Cash','12121hdhdhd33', NULL);
+INSERT INTO payment (guest_id, booking_id, payment_date, amount, method,trans_id, remarks)
+VALUES (24, 3, '2024-07-01', 1000.00, 'Cash','12121hdhdhd33', NULL);

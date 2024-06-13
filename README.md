@@ -9,6 +9,7 @@ This project aims to create a robust object-oriented system for managing hotel d
 *Milestone 1: Establish project parameters, outline structural framework, and allocate specific responsibilities to team members.<br/>
 *Milestone 2: Establish project data storage and initial service implementation for each module.<br/>
 *Milestone 3: Enhance tables as per evolving needs, integrate Swagger documentation, Git-hub workflow for pushing image into docker hub and develop customized services.<br/>
+*Milestone 4: Implemented front end using themeleaf, integrated both front and back end. Updating Docker image for every push.
 
 
 # Features
@@ -37,14 +38,13 @@ To use the hotel data project:
 ## Project Members
 
 
-| Member           | Feature          | Note |
+| Member           | Feature          | Note                                                                                                                                              |
 |------------------|------------------|-----|
 | Cameron Laviste  | JUnit            | hotel service junit testing   |
 | Jerry Tang       | Front End        | Setting up website HTML   |
 | Jon Doretti      | -                | -   |
-| Vinod Kotapati   | Database         | Setting up possible docker opportinity |
+| Vinod Kotapati   | Payment, Booking | The Booking table manages guest bookings, while the Payment table records payment transactions made by guests)<br/> [Link to package-info.java](https://github.com/CamLav24/SE352-Group1/blob/master/src/main/java/cdm/depaul/edu/se352/group1/se352group1/booking/package-info.java) |
 | Shihua Zhang     | Front End        | setting up front end sorting functions / feature   |
-
 
 <br/>
 
@@ -110,3 +110,12 @@ Before sorting:
 After sorting (in prize ascending order):
 
 ![afterSort.png](src/main/resources/img/afterSort.png)
+
+Working code (Milestone 4):
+
+![img6.png](src/main/resources/img/img6.png)
+
+![img_1.png](src/main/resources/img/img_1.png)
+
+![img_2.png](src/main/resources/img/img_2.png)
+

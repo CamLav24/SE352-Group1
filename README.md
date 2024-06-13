@@ -79,7 +79,7 @@ First we vote, and then roll dice.
 | 1   | IDE                   | IntelliJ IDEA | VS Code     | Language independent editor so that it can be used in non java course |
 | 2   | Dependency Management | Maven        | Gradle      | familiarity                                                           |
 | 3   | Configurations        | Application properties           | YML         | Liked this approach                                                   |
-| 4   | Database              | H2            | -           | Will update according to requirement.                                 |
+| 4   | Database              | H2            | Docker           | Will update according to requirement.                                 |
 
 
 ## Appendix
@@ -118,3 +118,4 @@ Working code (Milestone 4):
 ![img_1.png](src/main/resources/img/img_1.png)
 
 ![img_2.png](src/main/resources/img/img_2.png)
+
